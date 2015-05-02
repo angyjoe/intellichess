@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29E04EEA-2227-4D5F-9120-E7700C2928E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tests_Unittest_BitBoard</RootNamespace>
+    <AssemblyName>Tests_Unittest_BitBoard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BitBoard, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BitBoard\bin\Debug\BitBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\..\Misc\xunit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UT_ColoredBitBoard.cs" />
+    <Compile Include="UT_BishopBitBoard.cs" />
+    <Compile Include="UT_BitBoard.cs" />
+    <Compile Include="UT_ChessBoard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UT_KingBitBoard.cs" />
+    <Compile Include="UT_KnightBitBoard.cs" />
+    <Compile Include="UT_PawnBitBoard.cs" />
+    <Compile Include="UT_QueenBitBoard.cs" />
+    <Compile Include="UT_RookBitBoard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EvaluationFunctions\NegaMax\NegaMax\NegaMax.csproj">
+      <Project>{b4ab56f3-9c0f-4a9c-b4ac-d0c007380506}</Project>
+      <Name>NegaMax</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IntelliChess\Tests_TranspositionTable\Tests_TranspositionTable.csproj">
+      <Project>{40248709-2e4d-4fa4-87b3-6d1528e32641}</Project>
+      <Name>Tests_TranspositionTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MoveGen\MoveGen\MoveGen.csproj">
+      <Project>{BE5B2CD9-4C56-4D07-89A9-9E03A9F655A9}</Project>
+      <Name>MoveGen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xboard\Xboard\Winboard.csproj">
+      <Project>{835ba354-5ca5-44c0-b5f3-0e4e4e33c42b}</Project>
+      <Name>Winboard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

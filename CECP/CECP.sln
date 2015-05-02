@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CECP", "CECP\CECP.csproj", "{2F6793B5-37A5-4259-9F55-F9CE60C4C9AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_CECP", "Test_CECP\Test_CECP.csproj", "{0A2A46BF-2E8D-419C-B53E-B1C4A745C80E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F6793B5-37A5-4259-9F55-F9CE60C4C9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6793B5-37A5-4259-9F55-F9CE60C4C9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6793B5-37A5-4259-9F55-F9CE60C4C9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6793B5-37A5-4259-9F55-F9CE60C4C9AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2A46BF-2E8D-419C-B53E-B1C4A745C80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2A46BF-2E8D-419C-B53E-B1C4A745C80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2A46BF-2E8D-419C-B53E-B1C4A745C80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2A46BF-2E8D-419C-B53E-B1C4A745C80E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

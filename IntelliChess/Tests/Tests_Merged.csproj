@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FD0058A-970F-4A21-8BC9-3C9EE8B6D6BF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bayes\Test_BayesValues\Test_BayesValues.csproj">
+      <Project>{BD4DFC47-8EBB-4EC4-A9B7-E86EACF1E10A}</Project>
+      <Name>Test_BayesValues</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BitBoard\BitBoard\BitBoard.csproj">
+      <Project>{A1284860-38EA-4106-AE4E-97153A5F7F1D}</Project>
+      <Name>BitBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BitBoard\Tests_Unittest_BitBoard\Tests_Unittest_BitBoard.csproj">
+      <Project>{29E04EEA-2227-4D5F-9120-E7700C2928E1}</Project>
+      <Name>Tests_Unittest_BitBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CECP\Test_CECP\Test_StringBitBoardConverter.csproj">
+      <Project>{0A2A46BF-2E8D-419C-B53E-B1C4A745C80E}</Project>
+      <Name>Test_StringBitBoardConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MoveGen\MoveGenTests\MoveGenTests.csproj">
+      <Project>{3CD712B0-F47D-4FE7-9F4B-80F471AA10D3}</Project>
+      <Name>MoveGenTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tests_TranspositionTable\Tests_TranspositionTable.csproj">
+      <Project>{40248709-2E4D-4FA4-87B3-6D1528E32641}</Project>
+      <Name>Tests_TranspositionTable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
